@@ -5,6 +5,8 @@ import { gql } from 'apollo-boost';
 import CollectionPage from './collection.component';
 import Spinner from '../../components/spinner/spinner.component';
 
+// A Note - getCollectionsByTitle is a prebuilt query that is created in the bak-end, one cant use any old name.
+// it must already exist in the back end
 const GET_COLLECTION_BY_TITLE = gql`
   query getCollectionsByTitle($title: String!) {
     getCollectionsByTitle(title: $title) {
